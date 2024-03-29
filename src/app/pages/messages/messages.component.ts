@@ -23,16 +23,16 @@ import { SidibarComponent } from '../../shared/layouts/sidibar/sidibar.component
   styleUrl: './messages.component.scss',
 })
 export class MessagesComponent implements OnInit {
-  @Select(MessageState.selectMessages) messages$!: Observable<IMessage[]>;
+  // @Select(MessageState.selectMessages) messages$!: Observable<IMessage[]>;
   constructor(private messageService: MessageService, private store: Store) {}
 
   ngOnInit(): void {
-    this.messages$.subscribe({
-      next: (value) => {
-        if (!value.length) {
-          this.store.dispatch(new GetAllMessage());
-        }
-      },
-    });
+    // this.messages$.subscribe({
+    //   next: (value) => {
+    //     if (!value.length) {
+    //       this.store.dispatch(new GetAllMessage());
+    //     }
+    //   },
+    // });
   }
 }

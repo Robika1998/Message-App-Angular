@@ -11,12 +11,11 @@ export const routes: Routes = [
     path: '',
     component: MasterComponent,
     children: [
-      { path: '', component: LoginComponent, canActivate: [guestGuard] },
+      { path: '', component: LoginComponent,  },
       { path: 'register', component: RegisterComponent },
       {
         path: 'messages',
         component: MessagesComponent,
-        canActivate: [guestGuard]
       },
       { path: 'compose', component: ComposeComponent },
     ],
